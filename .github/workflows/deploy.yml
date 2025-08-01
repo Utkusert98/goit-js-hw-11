@@ -9,12 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy 🚀
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          branch: gh-pages  # GitHub Pages'e deploy edilecek dal
-          folder: .         # Root klasörden deploy et
+          branch: gh-pages
+          folder: .  # veya dist
           token: ${{ secrets.GITHUB_TOKEN }}
